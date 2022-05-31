@@ -13,7 +13,7 @@ export default function Nav({loadHomePage,loadJobsPage,loadContactUsPage,loadLog
          </div>    
      </div>
      <div className="Hero__Container">
-        <img src="/imgs/Yueyuan Tech banner.jpg" alt="Business Banner"></img>
+        <img src="/imgs/Yueyuan-Tech-Banner.jpg" alt="Business Banner"></img>
      </div>
     </>
   )
