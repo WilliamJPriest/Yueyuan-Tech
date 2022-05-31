@@ -14,7 +14,7 @@ router.post('/posts', async (req, res)=>{
     });
     try{
         const savedJobPosting= await jobPosting.save()
-        res.send(savedJobPosting)
+        res.json(savedJobPosting)
     } catch(err){
         res.status(400).send(err)
 
@@ -22,7 +22,17 @@ router.post('/posts', async (req, res)=>{
 
     });
 
-router.get('/posts',authMiddleWare,(req,res)=>{
-    res.send(req.user);
+router.get('/posts', authMiddleWare,  async (req,res)=>{
+    try{
+        const jobPosting = await Jobs.find();
+        return res.status(200).json({
+            success:true,
+            count: jobPosting.length,
+            data: jobPosting,
+        });
+    }catch(err){
+        console.log(err)
+        res.status(500)
+    }
 })
 module.exports= router;

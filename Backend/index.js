@@ -9,12 +9,13 @@ const postsRoute= require('./Routes/posts');
 
 dotenv.config();
 
-mongoose.connect(
-    process.env.DB__CONNECT,
-    { useNewUrlParser: true },
-    ()=>{
-        console.log("Connected")
-    });
+mongoose
+    .connect(
+        process.env.DB__Connect,)
+    .then(() => console.log("Connected!"))
+    .catch(err => console.log(err))
+    
+
 
 
 app.use(express.json());

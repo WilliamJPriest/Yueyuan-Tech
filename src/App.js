@@ -7,6 +7,7 @@ import Footer from './Footer/Footer.js';
 import JobsBoard from './JobsBoard/JobsBoard.js';
 import ContactUs from './ContactUs/ContactUs.js';
 import LoginPage from './LoginPage/Login.js' 
+import UserPage from './UserPage/userPage.js'
 
 
 function App() {
@@ -56,7 +57,7 @@ function App() {
     <>
       <h1>Login</h1>
       <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <LoginPage/>
+      <LoginPage setPage={setPage}/>
       <Footer/>
     </>
   );
@@ -64,7 +65,7 @@ function App() {
     <>
       <h1>Login</h1>
       <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <LoginPage/>
+      <UserPage/>
       <Footer/>
     </>
   );

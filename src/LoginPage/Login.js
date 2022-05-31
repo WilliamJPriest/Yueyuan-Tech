@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-export default function Login() {
+export default function Login({setPage}) {
   let [authPage, setAuthPage]=useState("Login")
   let [username,setUsername]=useState("");
   let [password,setPassword]=useState("")
@@ -35,9 +35,10 @@ export default function Login() {
             email,
             password
           })
-        }).then(()=>{
-        console.log("logged in") 
         })
+        .then(response => response.json())
+        .then(data => localStorage.setItem("token",data.token))
+        .then(setPage("LoggedIn"))
       }catch(error){
         console.log(error)
       }

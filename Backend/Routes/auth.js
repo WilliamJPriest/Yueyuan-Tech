@@ -3,6 +3,7 @@ const User = require('../Models/User.js');
 const {registerValidation,loginValidation}=require('../validation');
 const bcrypt = require('bcrypt');
 const jwt= require('jsonwebtoken')
+const authMiddleWare=require('./verifyToken')
 
 
 router.post('/register', async (req,res)=>{
@@ -26,7 +27,7 @@ router.post('/register', async (req,res)=>{
     });
       try{  
         const savedUser= await user.save();
-        res.send(savedUser)
+        res.json(savedUser)
       }catch(err){
         res.status(400).send(err);
       }
@@ -41,11 +42,30 @@ router.post('/login', async (req,res)=>{
 
   const passwordValidation= await bcrypt.compare(req.body.password,userDetails.password)
   if(!passwordValidation) return(res.status(400).send("password is incorrect"))
+  
+  
 
-  const userToken= jwt.sign({_id: userDetails._id},process.env.HIDDEN__TOKEN);
-  res.header('auth-token',userToken).send(userToken);
+  const userToken= jwt.sign({_id: userDetails._id, },process.env.HIDDEN__TOKEN);
+  res.json({auth: true, token: userToken,});
+
 
 })
+
+router.get('/', authMiddleWare, async (req, res)=>{
+  try{
+     const token= req.header('x-auth-token');
+     
+     const user = await User.findById(jwt.decode(token))
+     return res.status(200).json({
+      success:true,
+      data: user,
+  });
+ }catch(err){
+  console.log(err)
+  res.status(500)
+}
+})
+
 
 module.exports=router;
 
