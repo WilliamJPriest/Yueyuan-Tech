@@ -37,6 +37,10 @@
   /* pointer-events: cursor; */
 
 }
+.Nav__Container .Active {
+  color: green;
+}
+
 .Hero__Container{
  width:100%;
  height:200px;
@@ -134,8 +138,16 @@
 .Client__Logo{
   background-color: var(--SCY);
   width:100%;
-  border:2px solid var(--OL)
+  border:2px solid var(--OL);
 
+}
+.Client__Logo img{
+  width:100px;
+  height:100%;
+}
+
+.Client__Logo img:nth-child(2){
+  margin:2rem;
 }
 
 .Logo__Span{
@@ -215,7 +227,7 @@
 
 .Footer__Container{ 
   text-align: center;
-  padding-top: 1rem;
+  padding: 3rem;
   background-color: var(--BG);
   color:var(--TXT)
 

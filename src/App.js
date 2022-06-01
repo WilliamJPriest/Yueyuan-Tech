@@ -31,7 +31,7 @@ function App() {
 
   if(page==="Home") return (
     <>
-      <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage} />
+      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage} />
       <AboutUs/>
       <OurClients/>
       <Footer/>
@@ -40,7 +40,7 @@ function App() {
   if(page==="Jobs") return (
     <>
       <h1>Jobs</h1>
-      <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <JobsBoard/>
       <Footer/>
     </>
@@ -48,7 +48,7 @@ function App() {
   if(page==="ContactUs") return (
     <>
       <h1>ContactUs</h1>
-      <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <ContactUs/>
       <Footer/>
     </>
@@ -56,7 +56,7 @@ function App() {
   if(page==="Login") return (
     <>
       <h1>Login</h1>
-      <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <LoginPage setPage={setPage}/>
       <Footer/>
     </>
@@ -64,7 +64,7 @@ function App() {
   if(page==="LoggedIn") return (
     <>
       <h1>Login</h1>
-      <Nav loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <UserPage/>
       <Footer/>
     </>

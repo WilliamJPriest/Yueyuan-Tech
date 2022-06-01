@@ -7,10 +7,10 @@ export default function OurClients() {
             <h3>Our Clients</h3>
             <div className='Clients__Logo__Container'>
                 <div className="Client__Logo Logo__Span">
-                    <img src="" alt="logo"></img>
+                    <img src="./imgs/bytedance-logo.png" alt="logo"></img>
                 </div>
                 <div className="Client__Logo Logo__Span">
-                    <img src="" alt="logo"></img>
+                    <img src="./imgs/Original_Logo.svg" alt="logo"></img>
                 </div>
                 <div className="Client__Logo">
                     <img src="" alt="logo"></img>

@@ -9,14 +9,14 @@ export default function UserPage() {
       headers: { 'x-auth-token': localStorage.getItem("token")},
     })
     .then(response => response.json())
-    .then(data => setLoggedUser(data.data)); 
+    .then(data => setLoggedUser(data.data.username)); 
 },[]);
   return (
     <>
       <div className="User__Section">
           <div className="User__Container">
               <div className="Username">
-                       <h1>Hello {loggedUser.username}</h1>
+                       <h1>Hello {loggedUser}</h1>
               </div>
           </div>
       </div>  

@@ -13,9 +13,9 @@ export default function AboutUs() {
                 </p>
             </div> 
             <div className='About__Us__Imgs'>
-              <img src="./imgs/building.jpeg" alt="placeholder"></img>
-              <img src="./imgs/building 2.jpeg" alt="placeholder"></img>
-              <img src="./imgs/office.jpeg" alt="placeholder"></img>
+              <img src="./imgs/Building.jpeg" alt="placeholder"></img>
+              <img src="./imgs/Building-2.jpeg" alt="placeholder"></img>
+              <img src="./imgs/Office.jpeg" alt="placeholder"></img>
             </div>
         </section>
     </>
