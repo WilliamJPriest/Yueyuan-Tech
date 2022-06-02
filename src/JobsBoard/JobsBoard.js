@@ -10,18 +10,23 @@ export default function JobsBoard() {
         .then(data => setJobData(data.data)) 
     },[]);
   return (
-<>
+    <>
         <section className="Jobs__Board__Container">
             <form>
                 <input placeholder='search'></input>
                 <button>Search</button>
             </form>
             <div className='Jobs__Container'>
-                <div className="Job">
                    {jobData.map((items) =>(
-                       <h1>{items.title}</h1>
-                   ))}
-                </div>
+                    <div className="Job">   
+                       <h3>{items.title}</h3>
+                       <div className="Salary__Contact">
+                        <p>{items.salary}</p>
+                        <p>Contact:</p>
+                       </div>
+                       <p className="Desc">{items.desc}</p> 
+                    </div>
+                   ))}    
             </div>
         </section>
     </>

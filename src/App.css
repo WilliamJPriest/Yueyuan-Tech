@@ -167,6 +167,85 @@
   width:200px;
 }
 
+.Jobs__Container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+  background-color: var(--BG);
+  color: var(--TXT);
+  gap:1rem;
+}
+
+.Job{
+  width:300px;
+  height:30%;
+  border: 1px solid var(--TXT);
+  border-radius:25px;
+  margin-top:1rem;
+}
+
+.Job h3{
+  position: relative;
+  width:80px;
+  margin:auto;
+} 
+
+.Job h3::after{
+  content:"";
+  position: absolute;
+  display:inline-block;
+  background-color:var(--TXT);
+  width:100px;
+  height:1px;
+  left:-15%;
+  bottom:0%;
+}
+
+.Salary__Contact{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  
+}
+.Salary__Contact p:nth-child(1){
+  position: relative;
+  margin-left:1rem;
+}
+
+.Salary__Contact p:nth-child(2){
+  position: relative;
+  margin-right:1rem;
+}
+.Salary__Contact p:nth-child(1)::after{
+  content:"";
+  position: absolute;
+  display:inline-block;
+  background-color:var(--TXT);
+  width:120%;
+  height:1px;
+  left:-12%;
+  bottom:0%;
+}
+
+.Salary__Contact p:nth-child(2)::after{
+  content:"";
+  position: absolute;
+  display:inline-block;
+  background-color:var(--TXT);
+  width:120%;
+  height:1px;
+  left:-12%;
+  bottom:0%;
+}
+
+.Desc{
+  margin:auto;
+  width:80px;
+  margin-top:2rem;
+}
+
 .Login__Section{
   width:100%;
   display:flex;

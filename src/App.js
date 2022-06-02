@@ -11,7 +11,7 @@ import UserPage from './UserPage/userPage.js'
 
 
 function App() {
-  let [page, setPage]=useState("Login");
+  let [page, setPage]=useState("Jobs");
 
   const loadHomePage=()=>{
     setPage("Home")
@@ -39,7 +39,6 @@ function App() {
   );
   if(page==="Jobs") return (
     <>
-      <h1>Jobs</h1>
       <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <JobsBoard/>
       <Footer/>
@@ -47,7 +46,6 @@ function App() {
   );
   if(page==="ContactUs") return (
     <>
-      <h1>ContactUs</h1>
       <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <ContactUs/>
       <Footer/>
@@ -55,15 +53,13 @@ function App() {
   );
   if(page==="Login") return (
     <>
-      <h1>Login</h1>
       <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <LoginPage setPage={setPage}/>
       <Footer/>
     </>
   );
   if(page==="LoggedIn") return (
-    <>
-      <h1>Login</h1>
+    <>  
       <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
       <UserPage/>
       <Footer/>
