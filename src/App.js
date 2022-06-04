@@ -8,7 +8,7 @@ import JobsBoard from './JobsBoard/JobsBoard.js';
 import ContactUs from './ContactUs/ContactUs.js';
 import LoginPage from './LoginPage/Login.js' 
 import UserPage from './UserPage/userPage.js'
-
+import Hero from './Components/Hero.js'
 
 function App() {
   let [page, setPage]=useState("Jobs");
@@ -32,6 +32,7 @@ function App() {
   if(page==="Home") return (
     <>
       <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage} />
+      <Hero/>
       <AboutUs/>
       <OurClients/>
       <Footer/>
