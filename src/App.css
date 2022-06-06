@@ -167,6 +167,12 @@
   width:200px;
 }
 
+.Jobs__Board__Container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .Jobs__Container{
   display:flex;
   justify-content: center;

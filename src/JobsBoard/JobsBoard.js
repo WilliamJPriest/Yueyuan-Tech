@@ -28,6 +28,7 @@ export default function JobsBoard() {
                     </div>
                    ))}    
             </div>
+            <button>Post a Job</button>
         </section>
     </>
   )

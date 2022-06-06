@@ -9,14 +9,14 @@ export default function ContactUs() {
   return (
     <>  
     <section className="Contact__Us__Container">
-      <form  onSubmit={handleSubmit}className="User__Info">
-        <label for="name">Enter your name</label>
-        <input type="name" id="name" name="name"></input>
-        <label for="email">Enter your email</label>
-        <input type="email" id="email" name="email"></input>
-        <input type="submit" value="Submit" />
-        
-      </form>
+      <article className="Contact__Us">
+        <h3>Contact Us</h3>
+        <p className="Address"> 1568 Nanning lu yadda yadda yadda</p>
+        <p className="Manager__Info">
+          <span>Ron B Ronnyson </span>
+          <a href="#"><i></i>666-666-6666</a>
+        </p>
+      </article>
     </section>
     
     </>
