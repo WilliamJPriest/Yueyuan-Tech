@@ -57,8 +57,8 @@ export default function Login({setPage}) {
   if(authPage==="Login")
   return (
     <>
-      <div className="Login__Section">
-        <div className="Login__Container">
+      <div className="Login__Container">
+        <div className="Login">
           <form onSubmit={handleLoginSubmit}>
           <label for="Émail">
             Email: 
@@ -78,8 +78,8 @@ export default function Login({setPage}) {
   if(authPage==="Register")
   return (
     <>
-      <div className="Register__Section">
-        <div className="Register__Container">
+      <div className="Register__Container">
+        <div className="Register">
           <form onSubmit={handleRegisterSubmit}>
           <label for="Username">
             Create a Username: 

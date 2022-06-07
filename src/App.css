@@ -252,7 +252,21 @@
   margin-top:2rem;
 }
 
-.Login__Section{
+.Contact__Us__Container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  background-color: var(--BG);
+  color: var(--TXT);
+}
+
+.Contact__Us{
+  border:1px solid var(--TXT);
+
+}
+
+.Login__Containe{
   width:100%;
   display:flex;
   justify-content: center;
@@ -260,7 +274,7 @@
   background-color: var(--BG);
 }
 
-.Login__Container{
+.Login{
   color: var(--TXT);
   border: 1px solid var(--TXT);
   border-radius: 25px;
@@ -273,7 +287,7 @@
   margin: 2rem;
 }
 
-.Login__Container form{
+.Login form{
   display: flex;
   flex-direction: column;
   gap:1rem;
@@ -281,7 +295,7 @@
 }
 
 
-.Register__Section{
+.Register__Container{
   width:100%;
   display:flex;
   justify-content: center;
@@ -289,7 +303,7 @@
   background-color: var(--BG);
 }
 
-.Register__Container{
+.Register{
   color: var(--TXT);
   border: 1px solid var(--TXT);
   border-radius: 25px;
@@ -302,7 +316,7 @@
   margin: 2rem;
 }
 
-.Register__Container form{
+.Register form{
   display: flex;
   flex-direction: column;
   gap:1rem;
