@@ -253,20 +253,33 @@
 }
 
 .Contact__Us__Container{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   width:100%;
   background-color: var(--BG);
   color: var(--TXT);
 }
 
-.Contact__Us{
-  border:1px solid var(--TXT);
+figure{
+  grid-column: 1 / span 3 ;
+  width:100%;
 
 }
 
-.Login__Containe{
+figure img{
+  width:100vh;
+}
+
+.Contact__Us{
+  border:1px solid var(--TXT);
+  grid-column:  5;
+  margin: auto;
+  width:100%;
+  height:40%;
+
+}
+
+.Login__Container{
   width:100%;
   display:flex;
   justify-content: center;
