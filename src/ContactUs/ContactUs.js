@@ -16,11 +16,13 @@ export default function ContactUs() {
       </figure>
       <article className="Contact__Us">
         <h3>Contact Us</h3>
-        <p className="Address"> 1568 Nanning lu yadda yadda yadda</p>
-        <p className="Manager__Info">
-          <span>Ron B Ronnyson </span>
-          <a href="#"><i></i>666-666-6666</a>
-        </p>
+        <div className="Contact__Us__Details">
+          <p className="Address"> 1568 Nanning lu yadda yadda yadda</p>
+          <p className="Manager__Info">
+            <span>Ron B Ronnyson </span>
+            <a href="#"><i></i>666-666-6666</a>
+          </p>
+        </div>
       </article>
     </section>
     
