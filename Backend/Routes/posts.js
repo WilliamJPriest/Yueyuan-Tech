@@ -4,7 +4,6 @@ const User = require('../Models/User.js');
 const {postValidation}=require('../validation');
 const authMiddleWare=require('./verifyToken');
 const jwt= require('jsonwebtoken');
-const authAdminMiddleWare=require('./verifyAdmin');
 
 router.post('/posts', authMiddleWare, async (req, res)=>{
     const token= req.header('x-auth-token');
@@ -23,13 +22,14 @@ router.post('/posts', authMiddleWare, async (req, res)=>{
         try{
             const savedJobPosting= await jobPosting.save()
             res.json(savedJobPosting)
+            return
         }catch(err){
             res.status(400).send(err)
+            return
 
         }
-        
     }
-    res.status(401).send("not an admin");
+     res.status(401).send("not an admin")
 });
 
 router.get('/posts', authMiddleWare,  async (req,res)=>{
