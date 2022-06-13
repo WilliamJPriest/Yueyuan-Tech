@@ -4,7 +4,6 @@ const User = require('../Models/User.js');
 const {postValidation}=require('../validation');
 const authMiddleWare=require('./verifyToken');
 const jwt= require('jsonwebtoken');
-const authAdminMiddleWare=require('./verifyAdmin');
 
 router.post('/posts', authMiddleWare, async (req, res)=>{
     const token= req.header('x-auth-token');
