@@ -22,13 +22,14 @@ router.post('/posts', authMiddleWare, async (req, res)=>{
         try{
             const savedJobPosting= await jobPosting.save()
             res.json(savedJobPosting)
+            return
         }catch(err){
             res.status(400).send(err)
+            return
 
         }
-        
     }
-    res.status(401).send("not an admin");
+     res.status(401).send("not an admin")
 });
 
 router.get('/posts', authMiddleWare,  async (req,res)=>{
