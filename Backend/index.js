@@ -6,6 +6,7 @@ const cors= require('cors');
 
 const authRoute = require('./Routes/auth');
 const postsRoute= require('./Routes/posts');
+const profilesRoute = require('./Routes/profiles');
 
 dotenv.config();
 
@@ -23,5 +24,6 @@ app.use(cors());
 
 app.use('/api/user',authRoute);
 app.use('/api',postsRoute);
+app.use('/api',profilesRoute);
 
 app.listen(3001,()=> console.log("hello"))

@@ -16,6 +16,7 @@ export default function JobsBoard() {
                 <input placeholder='search'></input>
                 <button>Search</button>
             </form>
+            <section className="Joblisting">
             <div className='Jobs__Container'>
                    {jobData.map((items) =>(
                     <div className="Job">   
@@ -29,6 +30,7 @@ export default function JobsBoard() {
                    ))}    
             </div>
             <button>Post a Job</button>
+            </section>
         </section>
     </>
   )

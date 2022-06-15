@@ -6,9 +6,9 @@ export default function OurClients() {
         <section className='Clients__Container'>
             <h3>Our Clients</h3>
             <div className='Clients__Logo__Container'>
-                <div className="Client__Logo Logo__Span">
+                <a href="https://www.bytedance.com/" className="Client__Logo Logo__Span">
                     <img src="./imgs/bytedance-logo.png" alt="logo"></img>
-                </div>
+                </a>
                 <div className="Client__Logo Logo__Span">
                     <img src="./imgs/Original_Logo.svg" alt="logo"></img>
                 </div>

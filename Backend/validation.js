@@ -29,6 +29,16 @@ const postValidation=(data)=>{
     return joiSchema.validate(data)
 }
 
+const profileValidation=(data)=>{
+    const joiSchema = joi.object({
+        name:joi.string().min(6).required(),
+        bio:joi.string().min(6).max(400).required(),
+        contact:joi.string().min(6).required()
+    });
+    return joiSchema.validate(data)
+}
+
 module.exports.registerValidation=registerValidation
 module.exports.loginValidation=loginValidation
 module.exports.postValidation=postValidation
+module.exports.profileValidation=profileValidation

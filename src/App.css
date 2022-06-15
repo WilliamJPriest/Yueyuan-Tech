@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   width:100%;
-  height:60px;
+  height:15vh;
   background-color:var(--BG);
   color: var(--TXT);
 
@@ -170,14 +170,16 @@
 .Jobs__Board__Container{
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  height:75vh;
+  background-color: var(--BG);
 }
 
 .Jobs__Container{
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   width:100%;
   background-color: var(--BG);
   color: var(--TXT);
@@ -256,6 +258,7 @@
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   width:100%;
+  height: 75vh;
   background-color: var(--BG);
   color: var(--TXT);
 }
@@ -267,16 +270,15 @@ figure{
 }
 
 figure img{
-  width:100vh;
+  width:100%;
 }
 
 .Contact__Us{
   border:1px solid var(--TXT);
   grid-column:  5;
-  margin: auto;
-  padding:1rem;
   width:100%;
-  height:40%;
+  height:30%;
+  margin-top:2rem;
 }
 
 .Contact__Us h3{
@@ -299,19 +301,21 @@ figure img{
 
 
 .Contact__Us .Address{
-  margin-top: 1rem;
+  
 
 }
 
 .Contact__Us__Details{
   display:flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  margin-top: 1rem;
 
 }
 
 .Login__Container{
   width:100%;
+  height: 75vh;
   display:flex;
   justify-content: center;
   align-items:center;
@@ -341,6 +345,7 @@ figure img{
 
 .Register__Container{
   width:100%;
+  height: 75vh;
   display:flex;
   justify-content: center;
   align-items:center;
@@ -370,7 +375,7 @@ figure img{
 
 .Footer__Container{ 
   text-align: center;
-  padding: 3rem;
+  height:10vh;
   background-color: var(--BG);
   color:var(--TXT)
 

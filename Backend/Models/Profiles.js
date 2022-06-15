@@ -1,7 +1,7 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose');
 
 const profileSchema= new mongoose.Schema({
-    username:{
+    name:{
         type: String,
         required:true,
         min:6,
@@ -19,5 +19,6 @@ const profileSchema= new mongoose.Schema({
         min:0,
         max:200
     }
-    }) 
+}) 
+
 module.exports= mongoose.model('Profiles',profileSchema);
