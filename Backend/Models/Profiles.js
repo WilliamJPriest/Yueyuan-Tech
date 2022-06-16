@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose= require('mongoose');
 
 const profileSchema= new mongoose.Schema({
     name:{
@@ -8,15 +8,15 @@ const profileSchema= new mongoose.Schema({
         max:255
     },
     bio:{
-        type:String,
+        type: String,
         required:false,
-        min:0,
+        min:6,
         max:400
     },
     contact:{
-        type:String,
+        type: String,
         required:false,
-        min:0,
+        min:6,
         max:200
     }
 }) 

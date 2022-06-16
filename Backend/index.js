@@ -3,6 +3,9 @@ const app=express();
 const dotenv = require('dotenv');
 const mongoose= require('mongoose');
 const cors= require('cors');
+const bp = require('body-parser')
+
+
 
 const authRoute = require('./Routes/auth');
 const postsRoute= require('./Routes/posts');
@@ -21,6 +24,8 @@ mongoose
 
 app.use(express.json());
 app.use(cors());
+app.use(bp.json())
+app.use(bp.urlencoded({ extended: true }))
 
 app.use('/api/user',authRoute);
 app.use('/api',postsRoute);

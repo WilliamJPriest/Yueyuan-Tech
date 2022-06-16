@@ -171,15 +171,16 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height:75vh;
   background-color: var(--BG);
 }
 
+
 .Jobs__Container{
+  position: relative;
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction:column;
   width:100%;
   background-color: var(--BG);
   color: var(--TXT);
@@ -209,6 +210,12 @@
   height:1px;
   left:-15%;
   bottom:0%;
+}
+
+.Post__Job__BTN{
+  position: absolute;
+  top:25%;
+  left:80%;
 }
 
 .Salary__Contact{

@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const Profiles = require('../Models/Profiles');
+const profiles = require('../Models/Profiles.js');
 // const authMiddleWare=require('./verifyToken');
 // const jwt= require('jsonwebtoken');
 const {profileValidation}= require('../validation')
 
-router.post('/profiles',async (res, req)=>{
+router.post('/profiles', async ( req,res)=>{
     const {error}=profileValidation(req.body);
 
     if(error)return res.status(400).send(error.details[0].message)
     
-    const loadedProfile= new Profiles({    
+    const loadedProfile= new profiles({    
         name: req.body.name,
         bio: req.body.bio,
         contact: req.body.contact
