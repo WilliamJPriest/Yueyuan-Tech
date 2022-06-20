@@ -26,7 +26,7 @@ router.post('/profiles', async ( req,res)=>{
     }
 });
 router.get('/profiles', async (req,res)=> {
-    savedProfile= await profiles.find()
+    const savedProfile= await profiles.find()
 
 });
 
