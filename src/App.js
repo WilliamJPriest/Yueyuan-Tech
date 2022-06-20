@@ -8,10 +8,11 @@ import JobsBoard from './JobsBoard/JobsBoard.js';
 import ContactUs from './ContactUs/ContactUs.js';
 import LoginPage from './LoginPage/Login.js' 
 import UserPage from './UserPage/userPage.js'
+import ProfilePage from './Pages/ProfilePage';
 import Hero from './Components/Hero.js'
 
 function App() {
-  let [page, setPage]=useState("Jobs");
+  let [page, setPage]=useState("Profiles");
 
   const loadHomePage=()=>{
     setPage("Home")
@@ -28,7 +29,9 @@ function App() {
   const loadLoginPage=()=>{
     setPage("Login")
   }
-
+  const loadProfilePage=()=>{
+    setPage("Profiles")
+  }
   if(page==="Home") return (
     <>
       <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage} />
@@ -66,6 +69,13 @@ function App() {
       <Footer/>
     </>
   );
-}
+  if(page==="Profiles") return (
+    <>  
+      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <ProfilePage/>
+      <Footer/>
+    </>
+  );
+  }
 
 export default App;

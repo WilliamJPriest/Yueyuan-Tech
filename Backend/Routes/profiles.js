@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { find } = require('../Models/Profiles.js');
 const profiles = require('../Models/Profiles.js');
 // const authMiddleWare=require('./verifyToken');
 // const jwt= require('jsonwebtoken');
@@ -24,4 +25,9 @@ router.post('/profiles', async ( req,res)=>{
 
     }
 });
+router.get('/profiles', async (req,res)=> {
+    savedProfile= await profiles.find()
+
+});
+
 module.exports= router
