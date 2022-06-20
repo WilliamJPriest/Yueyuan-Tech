@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Yueyuan-tech/static/css/main.e57d85a5.css",
+    "main.js": "/Yueyuan-tech/static/js/main.a436147c.js",
+    "index.html": "/Yueyuan-tech/index.html",
+    "main.e57d85a5.css.map": "/Yueyuan-tech/static/css/main.e57d85a5.css.map",
+    "main.a436147c.js.map": "/Yueyuan-tech/static/js/main.a436147c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e57d85a5.css",
+    "static/js/main.a436147c.js"
+  ]
+}
