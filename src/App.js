@@ -54,21 +54,7 @@ function App() {
       <ContactUs/>
       <Footer/>
     </>
-  );
-  if(page==="Login") return (
-    <>
-      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <LoginPage setPage={setPage}/>
-      <Footer/>
-    </>
-  );
-  if(page==="LoggedIn") return (
-    <>  
-      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <UserPage/>
-      <Footer/>
-    </>
-  );
+  );  
   if(page==="Profiles") return (
     <>  
       <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
@@ -76,6 +62,22 @@ function App() {
       <Footer/>
     </>
   );
+  if(page==="Login") return (
+    <>
+      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <LoginPage setPage={setPage}/>
+      <Footer/>
+    </>
+  );  
+
+  if(page==="LoggedIn") return (
+    <>  
+      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <UserPage/>
+      <Footer/>
+    </>
+  );
+
   }
 
 export default App;

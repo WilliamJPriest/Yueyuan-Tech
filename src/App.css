@@ -379,6 +379,11 @@ figure img{
 
 }
 
+.Profiles__Container{
+  background-color: var(--BG);
+  color: var(--TXT);
+  
+}
 
 .Footer__Container{ 
   text-align: center;
