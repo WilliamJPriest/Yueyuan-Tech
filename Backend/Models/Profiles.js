@@ -18,7 +18,14 @@ const profileSchema= new mongoose.Schema({
         required:false,
         min:6,
         max:200
+    },
+    icon:{
+        type: String,
+        required:false,
+        min:6,
+        max:200
     }
+
 }) 
 
 module.exports= mongoose.model('Profiles',profileSchema);
