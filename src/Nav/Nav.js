@@ -4,7 +4,7 @@ export default function Nav({loadHomePage,loadJobsPage,loadContactUsPage,loadLog
   return (
     <>
      <div className="Nav__Container">
-         <img src="/imgs/Yueyuan-Tech-Icon.png" alt="logo"></img>
+      <a onClick={loadHomePage} ><img src="/imgs/Yueyuan-Tech-Icon.png" alt="logo"></img></a>
          <div className="Page__Links">
              <button onClick={loadHomePage}>Home</button>
              <button onClick={loadJobsPage}>Jobs</button>

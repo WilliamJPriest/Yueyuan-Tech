@@ -12,10 +12,13 @@ export default function JobsBoard() {
   return (
     <>
         <section className="Jobs__Board__Container">
-            <form>
-                <input placeholder='search'></input>
-                <button>Search</button>
-            </form>
+            <div className="Top__Section">
+                <form>
+                    <input placeholder='search'></input>
+                    <button>Search</button>
+                </form>
+            <button className="Post__Job__BTN">Post a Job</button>
+            </div>
             <div className='Jobs__Container'>
                    {jobData.map((items) =>(
                     <div className="Job">   
@@ -28,7 +31,6 @@ export default function JobsBoard() {
                     </div>
                    ))}    
             </div>
-            <button className="Post__Job__BTN">Post a Job</button>
         </section>
     </>
   )

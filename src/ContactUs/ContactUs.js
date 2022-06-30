@@ -12,7 +12,6 @@ export default function ContactUs() {
       <figure className="Contact__Us__Hero">
         <img src="./imgs/Yueyuan-Tech-Banner.jpg" alt="banner" />
         {/* resize company image and swap out */}
-        <figcaption>Company banner</figcaption>
       </figure>
       <article className="Contact__Us">
         <h3>Contact Us</h3>
