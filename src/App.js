@@ -9,10 +9,11 @@ import ContactUs from './ContactUs/ContactUs.js';
 import LoginPage from './LoginPage/Login.js' 
 import UserPage from './UserPage/userPage.js'
 import ProfilePage from './Pages/ProfilePage';
-import Hero from './Components/Hero.js'
+import Hero from './Components/Hero.js';
+import SetUpProfile from './Pages/SetUpProfile.js';
 
 function App() {
-  let [page, setPage]=useState("Profiles");
+  let [page, setPage]=useState("LoggedIn");
 
   const loadHomePage=()=>{
     setPage("Home")
@@ -73,7 +74,7 @@ function App() {
   if(page==="LoggedIn") return (
     <>  
       <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <UserPage/>
+      <SetUpProfile/>
       <Footer/>
     </>
   );

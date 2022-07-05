@@ -7,10 +7,7 @@ module.exports =function (req,res,next){
         const verifiedToken= jwt.verify(token, process.env.HIDDEN__TOKEN)
         req.user =verifiedToken
         next()
-    } catch{
+    }catch{
         res.status(400).send("token error")
     }
 }
-
-
-
