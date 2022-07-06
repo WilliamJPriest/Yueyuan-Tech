@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{Profiler, useState} from 'react'
 
 export default function () {
+  const [profileImg, setProfileImg]=useState('')
   return (
     <>
     <form  id="Setup__User__Profile">
@@ -12,7 +13,7 @@ export default function () {
         </label>
         <label >
             <div>
-                <button><img src="./imgs/Dingtalk.png" alt="" /></button>
+                {/* <button onClick={Profiler()} ><img src="./imgs/Dingtalk.png" alt="" /></button> */}
             </div>
         </label>
     </form>
