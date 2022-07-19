@@ -6,14 +6,14 @@ import OurClients from './Components/OurClients.js';
 import Footer from './Components/Footer.js';
 import JobsBoard from './Pages/JobsBoard.js';
 import ContactUs from './Pages/ContactUs.js';
-import LoginPage from './Pages/Login.js' 
-import UserPage from './Pages/userPage.js'
+import LoginPage from './Pages/Login.js' ;
+import UserPage from './Pages/UserPage.js';
 import ProfilePage from './Pages/ProfilePage';
 import Hero from './Components/Hero.js';
 import SetUpProfile from './Pages/SetUpProfile.js';
 
 function App() {
-  let [page, setPage]=useState("LoggedIn");
+  let [page, setPage]=useState("A");
 
   const loadHomePage=()=>{
     setPage("Home")
@@ -56,6 +56,13 @@ function App() {
       <Footer/>
     </>
   );  
+  if(page==="A") return (
+    <>  
+      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
+      <SetUpProfile setPage={setPage}/>
+      <Footer/>
+    </>
+  );
   if(page==="Profiles") return (
     <>  
       <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
@@ -71,14 +78,6 @@ function App() {
     </>
   );  
 
-  if(page==="LoggedIn") return (
-    <>  
-      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <SetUpProfile/>
-      <Footer/>
-    </>
-  );
-
-  }
+}
 
 export default App;
