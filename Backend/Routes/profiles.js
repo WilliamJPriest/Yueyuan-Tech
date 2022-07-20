@@ -16,7 +16,8 @@ router.post('/profiles', authMiddleWare, async ( req,res)=>{
     const loadedProfile= new profiles({    
         name: userDetails.username,
         bio: req.body.bio,
-        contact: req.body.contact
+        contact: req.body.contact,
+        icon: req.body.icon
     });
     try{
          const savedProfile= await loadedProfile.save()
