@@ -3,56 +3,70 @@ import SelectBTNS from '../Components/SelectBTNS';
 
 
 export default function () {
-  let [profileImg, setProfileImg]=useState("") 
-  let [bio,setBio]=useState("")
-  let [dingtalkNumber, setDingtalkNumber]=useState("")
+  let [icon, setIcon]=useState("a") 
+  let [bio,setBio]=useState("a")
+  let [contact, setContact]=useState("a")
   const [loggedUser,setLoggedUser]=useState("")
 
-//   useEffect(() =>{
-//     fetch("api/user",{
-//       headers: { 'x-auth-token': localStorage.getItem("token")},
-//     })
-//     .then(response => response.json())
-//     .then(data => setLoggedUser(data.data.username)); 
-// },[]);
-
-//   console.log(loggedUser)
-  console.log(profileImg)
+  useEffect(() => {
+    fetch("api/user",{
+      headers: { 'x-auth-token': localStorage.getItem("token")},
+    })
+    .then(response => response.json())
+    .then(data => setLoggedUser(data.data.username)); 
+    console.log(loggedUser)
+  }, [loggedUser])
+  
 
   const handleProfile=(e)=>{
     e.preventDefault()
 
-  }
+    try{
+      fetch("api/profiles",{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({       
+          loggedUser,
+          icon,
+          bio,
+          contact 
+        })
+      }).then(()=>{
+      console.log("hello") 
+    })
+    }catch(error){
+      console.log(error)
+      } 
+    }
 
-  const starImg=()=>{
-    setProfileImg("./imgs/star.png")
-    console.log("./imgs/star.png");
+  const starImg=(e)=>{
+    e.preventDefault()
+    setIcon("./imgs/star.png")
   }
-  const smugImg=()=>{
-    setProfileImg("./imgs/smug.png");
+  const smugImg=(e)=>{
+    e.preventDefault()
+    setIcon("./imgs/smug.png");
   }
-  const superHeroImg=()=>{
-    setProfileImg("./imgs/superhero.png");
+  const superHeroImg=(e)=>{
+    e.preventDefault()
+    setIcon("./imgs/superhero.png");
   }
 
   return (
     <>
     <form onSubmit={handleProfile} id="Setup__User__Profile">
-        <label id="name">
-        <input type="text" id="name" placeholder='add name' />
+        <label>
+            <input type="text" id="contact" value={contact} placeholder='add dingtalk number' onChange={(e)=>setContact(e.target.value)}/>
         </label>
         <label>
-            <input type="text" id="contact" placeholder='add dingtalk number'/>
-        </label>
-        <label>
-          <textarea/>
+          <textarea type="text"  value={bio} placeholder={bio} onChange={(e)=>setBio(e.target.value)}/>
         </label>
         <label>
             <div>
                <SelectBTNS starImg={starImg} smugImg={smugImg} superHeroImg={superHeroImg}/>
             </div>
         </label>
-        <button >Submit</button>
+        <button>Submit</button>
     </form>
     </>
 

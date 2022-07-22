@@ -9,7 +9,7 @@ export default function Login({setPage}) {
   const handleRegisterSubmit=  (e)=>{
     e.preventDefault()
      try{
-        fetch("/api/user/register",{
+        fetch("api/user/register",{
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({       
@@ -28,7 +28,7 @@ export default function Login({setPage}) {
   const handleLoginSubmit=(e)=>{
     e.preventDefault()
       try{
-        fetch("/api/user/login",{
+        fetch("api/user/login",{
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({       

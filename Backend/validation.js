@@ -33,7 +33,8 @@ const profileValidation=(data)=>{
     const joiSchema = joi.object({
         name:joi.string().min(6).required(),
         bio:joi.string().min(6).required(),
-        contact:joi.string().min(6).required()
+        contact:joi.string().min(6).required(),
+        icon: joi.string().min(6).required()
     });
     return joiSchema.validate(data)
 }
