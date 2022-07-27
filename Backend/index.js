@@ -5,8 +5,6 @@ const mongoose= require('mongoose');
 const cors= require('cors');
 const bp = require('body-parser')
 
-
-
 const authRoute = require('./Routes/auth');
 const postsRoute= require('./Routes/posts');
 const profilesRoute = require('./Routes/userProfiles');

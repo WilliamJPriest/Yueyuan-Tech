@@ -1,15 +1,16 @@
 import React from 'react'
+import {Link, NavLink} from 'react-router-dom'
 
-export default function Nav({loadHomePage,loadJobsPage,loadContactUsPage,loadLoginPage}) {
+export default function Nav() {
   return (
     <>
      <div className="Nav__Container">
-      <a onClick={loadHomePage}><img src="/imgs/Yueyuan-Tech-Icon.png" alt="logo"></img></a>
+      <a href="/"><img src="/imgs/Yueyuan-Tech-Icon.png" alt="logo"></img></a>
          <div className="Page__Links">
-             <button onClick={loadHomePage}>Home</button>
-             <button onClick={loadJobsPage}>Jobs</button>
-             <button onClick={loadContactUsPage}>Contact Us</button>
-             <button onClick={loadLoginPage}>Login</button>
+             <Link to="/" href="/">Home</Link>
+             <Link to="/JobsBoard" >Jobs</Link>
+             <Link to="/ContactUs" >Contact Us</Link>
+             <Link to="/Login">Login</Link>
          </div>    
      </div>
     </>

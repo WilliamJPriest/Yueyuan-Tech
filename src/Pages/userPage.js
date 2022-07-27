@@ -16,7 +16,7 @@ export default function UserPage() {
       <div className="User__Section">
           <div className="User__Container">
               <div className="Username">
-                       <h1>Hello {loggedUser}</h1>
+                    <h1>Hello {loggedUser}</h1>
               </div>
           </div>
       </div>  

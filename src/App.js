@@ -1,83 +1,32 @@
-import React,{useState} from 'react';
+import React from 'react';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import './App.css';
 import Nav from './Components/Nav.js';
-import AboutUs from './Components/AboutUs.js';
-import OurClients from './Components/OurClients.js';
 import Footer from './Components/Footer.js';
+import Home from './Pages/Home.js'
 import JobsBoard from './Pages/JobsBoard.js';
 import ContactUs from './Pages/ContactUs.js';
-import LoginPage from './Pages/Login.js' ;
-import UserPage from './Pages/UserPage.js';
-import ProfilePage from './Pages/ProfilePage';
-import Hero from './Components/Hero.js';
-import SetUpProfile from './Pages/SetUpProfile.js';
+import Login from './Pages/Login.js' ;
+import User from './Pages/UserPage.js';
+// import ProfilePage from './Pages/ProfilePage';
+// import SetUpProfile from './Pages/SetUpProfile.js';
+
 
 function App() {
-  let [page, setPage]=useState("A");
-
-  const loadHomePage=()=>{
-    setPage("Home")
-  }
-
-  const loadJobsPage=()=>{
-    setPage("Jobs")
-  }
-
-  const loadContactUsPage=()=>{
-    setPage("ContactUs")
-  }
-
-  const loadLoginPage=()=>{
-    setPage("Login")
-  }
-  const loadProfilePage=()=>{
-    setPage("Profiles")
-  }
-  if(page==="Home") return (
+    return (
     <>
-      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage} />
-      <Hero/>
-      <AboutUs/>
-      <OurClients/>
-      <Footer/>
+      <BrowserRouter>
+        <Nav/>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/JobsBoard" element={<JobsBoard/>}/>
+            <Route path="/ContactUs" element={<ContactUs/>}/>
+            <Route path="/Login" element={<Login/>}/>
+            <Route path="/User" element={<User/>}/>
+          </Routes>
+        <Footer/>
+      </BrowserRouter>
     </>
   );
-  if(page==="Jobs") return (
-    <>
-      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <JobsBoard/>
-      <Footer/>
-    </>
-  );
-  if(page==="ContactUs") return (
-    <>
-      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <ContactUs/>
-      <Footer/>
-    </>
-  );  
-  if(page==="A") return (
-    <>  
-      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <SetUpProfile setPage={setPage}/>
-      <Footer/>
-    </>
-  );
-  if(page==="Profiles") return (
-    <>  
-      <Nav page={page}loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <ProfilePage/>
-      <Footer/>
-    </>
-  );
-  if(page==="Login") return (
-    <>
-      <Nav page={page} loadHomePage={loadHomePage} loadJobsPage={loadJobsPage} loadContactUsPage={loadContactUsPage} loadLoginPage={loadLoginPage}/>
-      <LoginPage setPage={setPage}/>
-      <Footer/>
-    </>
-  );  
-
-}
-
+    }
 export default App;

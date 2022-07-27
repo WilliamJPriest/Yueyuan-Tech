@@ -2,6 +2,7 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
+  background-color: var(--BG);
 }
 :root{
   --BG:#040F21;
@@ -29,11 +30,12 @@
   margin-left: 1rem;
 }
 
-.Nav__Container button{
+.Nav__Container a{
   background-color:transparent;
   color:var(--TXT);
   border:none;
   margin-right: 1rem;
+  text-decoration: none;
   /* pointer-events: cursor; */
 
 }
